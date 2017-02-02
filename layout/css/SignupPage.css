@@ -1,0 +1,82 @@
+/* Bordered form */
+form {
+    border: 3px solid #000000;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px 15px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+/*Image Align*/
+#img{
+	width: 100px;
+	height:100px;
+	padding:2px 2px;
+	display: block;
+    margin: 0 auto;
+}
+
+#logo{
+	width: 300px;
+	height:150px;
+	padding:5px 5px;
+	display: block;
+    margin: 0 auto;
+}
+
+/* Set a style for all buttons */
+#btn1{
+    width: 300px;
+    height: 40px;
+	padding: 14px 20px;
+    background-color: #f44336;
+}
+#btn2{
+    width: 300px;
+    height: 40px;
+	padding: 14px 20px;
+	background-color: #008000;
+}
+#btns{
+    text-align: center;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.user {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
