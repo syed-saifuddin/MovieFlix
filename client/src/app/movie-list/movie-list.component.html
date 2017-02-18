@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MovieFlix</title>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a routerLink="/movies">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/mtype">Movies</a>
+                </li>
+                <li>
+                    <a routerLink="/stype">TV Series</a>
+                </li>
+                <li>
+                    <a routerLink="/searchyr">Search By Year</a>
+                </li>
+                <li>
+                    <a routerLink="/searchgnr">Search By Genre</a>
+                </li>
+                <li>
+                    <a routerLink="/adminadd">Add Movies</a>
+                </li>
+                <li>
+                    <a href="LoginPage.html">SignOut</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Home
+                <small>Welcome User</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row" >
+        <div class="col-lg-12">
+            <h2 class="page-header">All Titles</h2>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center" *ngFor="let movie of movieList">
+            <a [routerLink]="[movie.id]"><img [src]="movie.poster" class="img-rounded" height="200px" width="200px" ></a>
+            <h3>{{movie.title}}</h3>
+            <h4>{{movie.actors}}</h4>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; MovieFlix 2017</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
+
+</body>
+
+</html>

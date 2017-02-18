@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MovieFlix</title>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a routerLink="/movies">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/mtype">Movies</a>
+                </li>
+                <li>
+                    <a routerLink="/stype">TV Series</a>
+                </li>
+                <li>
+                    <a routerLink="/searchyr">Search By Year</a>
+                </li>
+                <li>
+                    <a routerLink="/searchgnr">Search By Genre</a>
+                </li>
+                <li>
+                    <a href="LoginPage.html">SignOut</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Create Movie
+                <small>Welcome Admin</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <form>
+        <div class="form-gorup" >
+
+            <label for="title"> Title</label>
+            <input type="text" name="title" [(ngModel)]="movie.title" required class="form-control" id="title" placeholder="Add Title">
+
+            <label for="year"> Year</label>
+            <input type="text" name="year" [(ngModel)]="movie.year" required class="form-control" id="year" placeholder="Add Year">
+
+            <label for="rated"> Rated</label>
+            <input type="text" name="rated" [(ngModel)]="movie.rated" class="form-control" id="rated" placeholder="Add PG rating">
+
+            <label for="released"> Release Date</label>
+            <input type="text" name="release" [(ngModel)]="movie.released" class="form-control" id="released" placeholder="Add Released Date">
+
+            <label for="runtime"> Runtime</label>
+            <input type="text" name="runtime" [(ngModel)]="movie.runtime" class="form-control" id="runtime" placeholder="Add Runtime">
+
+            <label for="genre"> Genre</label>
+            <input type="text" name="genre" [(ngModel)]="movie.genre" required class="form-control" id="genre" placeholder="Add Genre">
+
+            <label for="director"> Director</label>
+            <input type="text" name="director" [(ngModel)]="movie.director" class="form-control" id="director" placeholder="Add Director/Directors">
+
+            <label for="writer"> Writer</label>
+            <input type="text" name="writer" [(ngModel)]="movie.writer" class="form-control" id="writer" placeholder="Add Writers">
+
+            <label for="actors"> Actors</label>
+            <input type="text" name="actors" [(ngModel)]="movie.actors" required class="form-control" id="actors" placeholder="Add Actors">
+
+            <label for="plot"> Plot</label>
+            <input type="text" name="plot" [(ngModel)]="movie.plot" required class="form-control" id="plot" placeholder="Add Plot">
+
+            <label for="language"> Language</label>
+            <input type="text" name="language" [(ngModel)]="movie.language" required class="form-control" id="language" placeholder="Add Language">
+
+            <label for="country"> Country</label>
+            <input type="text" name="country" [(ngModel)]="movie.country" required class="form-control" id="country" placeholder="Add Country">
+
+            <label for="awards"> Awards</label>
+            <input type="text" name="awards" [(ngModel)]="movie.awards" class="form-control" id="awards" placeholder="Add Awards">
+
+            <label for="poster"> Poster Link</label>
+            <input type="text" name="poster" [(ngModel)]="movie.poster" required class="form-control" id="poster" placeholder="Add Poster Link">
+
+            <label for="metascore"> MetaScore</label>
+            <input type="text" name="metascore" [(ngModel)]="movie.metaScore"  class="form-control" id="metascore" placeholder="Add MetaScore">
+
+            <label for="imdbRating"> IMDB Rating</label>
+            <input type="text" name="imdbRating" [(ngModel)]="movie.imdbRating" required class="form-control" id="imdbRating" placeholder="Add IMDB Rating">
+
+            <label for="imdbVotes"> IMDB Votes</label>
+            <input type="text" name="imdbVotes" [(ngModel)]="movie.imdbVotes" required class="form-control" id="imdbVotes" placeholder="Add IMDB Votes">
+
+            <label for="imdbId"> IMDB ID</label>
+            <input type="text" name="imdbId" [(ngModel)]="movie.imdbId" required class="form-control" id="imdbId" placeholder="Add IMDB ID">
+
+            <label for="type"> Type</label>
+            <input type="text" name="type" [(ngModel)]="movie.type" required class="form-control" id="type" placeholder="Add Type">
+
+
+            <div class="input-group-btn">
+                <button class="btn btn-primary" type="submit" (click)="addMovie()">Add Movie</button>
+            </div>
+
+        </div>
+    </form>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; MovieFlix 2017</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
+
+</body>
+
+</html>
